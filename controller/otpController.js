@@ -36,7 +36,7 @@ const requestOtp = async (req, res) => {
     }
     const ownerEmail = user.email;
 
-    // Generate 6-digit OTP
+    // Generate 6-digit OTP generically without hardcoding
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
     const expiresAt = Date.now() + 10 * 60 * 1000; // 10 minutes
 
